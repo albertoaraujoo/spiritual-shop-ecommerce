@@ -1,23 +1,29 @@
-export default function Home() {
-  return (
-    <div className="min-h-screen">
-      <section className="from-gray-900 via-gray-800 to-black text-white">
-        <div className="container mx-auto">
-          <div className="mx-auto max-w-4xl text-center">
-            <h1 className="mb-6 text-4xl leading-tight font-bold md:text-6xl lg:text-7xl">
-              Descubra seu{" "}
-              <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">
-                estilo único
-              </span>
-            </h1>
+import { ProductList } from "@/components/common/product-list/product-list";
+import { HeroSection } from "./sections/HeroSection/HeroSection";
+import { productsData } from "@/data/products";
 
-            <p className="text-gray-300">
-              Explore nossa coleção exclusiva de roupas e acessórios premium.
-              Desde tênis icônicos até jaquetas de última tendência.
-            </p>
-          </div>
-        </div>
-      </section>
+export interface ProductProps {
+  id: string;
+  name: string;
+  price: number;
+  category: string;
+  slug: string;
+  categorySlug: string;
+  soldCount: number;
+  imageUrl: string;
+}
+
+export default function Home() {
+  const data = productsData;
+  const mostSellingProducts = [...data]
+    .sort((a, b) => b.soldCount - a.soldCount)
+    .slice(0, 10);
+
+  return (
+    <div className="min-h-screen space-y-6">
+      <HeroSection />
+
+      <ProductList products={mostSellingProducts} title="Mais vendidos" />
     </div>
   );
 }
