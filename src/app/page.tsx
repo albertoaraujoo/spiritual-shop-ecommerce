@@ -8,7 +8,7 @@ export interface ProductProps {
   price: number;
   category: string;
   slug: string;
-  categorySlug: string;
+  description: string;
   soldCount: number;
   imageUrl: string;
 }

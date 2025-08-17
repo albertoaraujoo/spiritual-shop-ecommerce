@@ -38,26 +38,24 @@ export function HeaderDropdownMenu() {
           </Link>
 
           {/* Desktop - Submenu */}
-          <DropdownMenuItem className="hidden md:block">
-            <DropdownMenuSub>
-              <DropdownMenuSubTrigger className="flex items-center gap-2 p-0">
-                <Layers color="#fff" size={14} />
-                Categorias
-              </DropdownMenuSubTrigger>
-              <DropdownMenuPortal>
-                <DropdownMenuSubContent>
-                  {Array.from(categories).map((category) => (
-                    <Link
-                      href={`/categoria/${formatCategory(category)}`}
-                      key={category}
-                    >
-                      <DropdownMenuItem>{category}</DropdownMenuItem>
-                    </Link>
-                  ))}
-                </DropdownMenuSubContent>
-              </DropdownMenuPortal>
-            </DropdownMenuSub>
-          </DropdownMenuItem>
+          <DropdownMenuSub>
+            <DropdownMenuSubTrigger className="focus:bg-accent focus:text-accent-foreground data-[variant=destructive]:text-destructive data-[variant=destructive]:focus:bg-destructive/10 dark:data-[variant=destructive]:focus:bg-destructive/20 data-[variant=destructive]:focus:text-destructive data-[variant=destructive]:*:[svg]:!text-destructive [&_svg:not([class*='text-'])]:text-muted-foreground relative flex hidden cursor-default items-center gap-2 rounded-sm p-0 px-2 py-1.5 text-sm outline-hidden select-none data-[disabled]:pointer-events-none data-[disabled]:opacity-50 data-[inset]:pl-8 md:flex [&_svg]:pointer-events-none [&_svg]:shrink-0 [&_svg:not([class*='size-'])]:size-4">
+              <Layers color="#fff" size={14} />
+              Categorias
+            </DropdownMenuSubTrigger>
+            <DropdownMenuPortal>
+              <DropdownMenuSubContent>
+                {Array.from(categories).map((category) => (
+                  <Link
+                    href={`/categoria/${formatCategory(category)}`}
+                    key={category}
+                  >
+                    <DropdownMenuItem>{category}</DropdownMenuItem>
+                  </Link>
+                ))}
+              </DropdownMenuSubContent>
+            </DropdownMenuPortal>
+          </DropdownMenuSub>
 
           {/* Mobile */}
           <DropdownMenuSeparator className="md:hidden" />

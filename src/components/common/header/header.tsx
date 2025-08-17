@@ -5,7 +5,7 @@ import { HeaderDropdownMenu } from "./components/header-dropdown-menu/header-dro
 
 export function Header() {
   return (
-    <header className="flex items-center justify-between p-6">
+    <header className="flex items-center justify-between p-6 md:px-12">
       <Link href="/">
         <Logo />
       </Link>
