@@ -1,3 +1,4 @@
+import { Footer } from "../footer/footer";
 import { Header } from "../header/header";
 
 interface PageLayoutProps {
@@ -9,9 +10,7 @@ export function PageLayout({ children }: PageLayoutProps) {
     <>
       <Header />
       <main className="bg-background min-h-screen p-6">{children}</main>
-      <footer className="p-4 text-center text-white">
-        <p>&copy; 2023 My E-commerce Store</p>
-      </footer>
+      <Footer />
     </>
   );
 }

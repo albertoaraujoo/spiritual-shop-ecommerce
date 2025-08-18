@@ -1,5 +1,6 @@
 import { ProductList } from "@/components/common/product-list/product-list";
 import { HeroSection } from "./sections/HeroSection/HeroSection";
+import { FeaturesSection } from "./sections/FeaturesSection/FeaturesSection";
 import { productsData } from "@/data/products";
 
 export interface ProductProps {
@@ -22,8 +23,8 @@ export default function Home() {
   return (
     <div className="min-h-screen space-y-6">
       <HeroSection />
-
       <ProductList products={mostSellingProducts} title="Mais vendidos" />
+      <FeaturesSection />
     </div>
   );
 }

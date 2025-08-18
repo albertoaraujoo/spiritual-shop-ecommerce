@@ -5,6 +5,8 @@ import {
   CarouselContent,
   CarouselNext,
 } from "@/components/ui/carousel";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 interface ProductListProps {
   title: string;
@@ -19,6 +21,12 @@ export function ProductList({ title, products }: ProductListProps) {
         {products.map((product) => (
           <ProductItem key={product.id} product={product} />
         ))}
+      </div>
+
+      <div className="flex justify-center pt-4 md:hidden">
+        <button className="rounded-lg bg-gradient-to-r from-blue-400 to-purple-500 px-8 py-3 font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg">
+          Ver Todos os Produtos
+        </button>
       </div>
 
       <div className="hidden max-h-fit w-full flex-col justify-start space-y-6 py-4 pr-12 md:visible md:flex">
@@ -37,6 +45,15 @@ export function ProductList({ title, products }: ProductListProps) {
 
           <CarouselNext className="bg-brand-main hidden cursor-pointer border-none hover:opacity-70 sm:flex" />
         </Carousel>
+
+        <div className="flex justify-center pt-4">
+          <Button
+            asChild
+            className="cursor-pointer rounded-full bg-gradient-to-r from-blue-400 to-purple-500 px-8 py-6 font-semibold text-white transition-all duration-300 hover:scale-105 hover:shadow-lg"
+          >
+            <Link href="/produtos">Ver Todos os Produtos</Link>
+          </Button>
+        </div>
       </div>
     </section>
   );
