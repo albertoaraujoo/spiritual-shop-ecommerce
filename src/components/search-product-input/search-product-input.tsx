@@ -8,6 +8,7 @@ export function SearchProductInput() {
 
   function handleQuery(data: string) {
     if (data.trim() === "") {
+      router.replace("/produtos");
       return;
     }
     router.replace(`/produtos?search=${data}`);

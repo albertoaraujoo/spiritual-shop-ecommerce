@@ -15,7 +15,7 @@ export function BottomCardItem({ product }: SeeMoreButtonProps) {
   return (
     <>
       <div
-        className={`px-1 md:w-[350px] md:px-4 ${
+        className={`w-full px-1 md:w-[350px] md:px-4 ${
           isProductPage ? "pb-0" : "pb-5"
         }`}
       >
