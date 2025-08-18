@@ -1,7 +1,7 @@
-import { ProductList } from "@/components/common/product-list/product-list";
-import { HeroSection } from "./sections/HeroSection/HeroSection";
-import { FeaturesSection } from "./sections/FeaturesSection/FeaturesSection";
+import { HeroSection } from "../sections/HeroSection/HeroSection";
+import { FeaturesSection } from "../sections/FeaturesSection/FeaturesSection";
 import { productsData } from "@/data/products";
+import { ProductList } from "@/components/product-list/product-list";
 
 export interface ProductProps {
   id: string;
