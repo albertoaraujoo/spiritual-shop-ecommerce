@@ -1,7 +1,7 @@
-import { ProductList } from "@/components/common/product-list/product-list";
-import { HeroSection } from "./sections/HeroSection/HeroSection";
-import { FeaturesSection } from "./sections/FeaturesSection/FeaturesSection";
+import { HeroSection } from "../sections/HeroSection/HeroSection";
+import { FeaturesSection } from "../sections/FeaturesSection/FeaturesSection";
 import { productsData } from "@/data/products";
+import { ProductList } from "@/components/product-list/product-list";
 
 export interface ProductProps {
   id: string;
@@ -21,7 +21,7 @@ export default function Home() {
     .slice(0, 10);
 
   return (
-    <div className="min-h-screen space-y-6">
+    <div className="min-h-screen space-y-6 md:py-6">
       <HeroSection />
       <ProductList products={mostSellingProducts} title="Mais vendidos" />
       <FeaturesSection />

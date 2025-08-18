@@ -9,7 +9,7 @@ export function PageLayout({ children }: PageLayoutProps) {
   return (
     <>
       <Header />
-      <main className="bg-background min-h-screen p-6">{children}</main>
+      <main className="bg-background min-h-screen px-6">{children}</main>
       <Footer />
     </>
   );
