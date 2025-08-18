@@ -18,7 +18,7 @@ export default async function ProductsPage({ searchParams }: ProductPageProps) {
       : data;
 
   return (
-    <div className="min-h-screen space-y-6">
+    <div className="min-h-screen space-y-6 py-6">
       <h1 className="px-2 pt-8 text-3xl font-bold md:px-6 md:text-4xl">
         Todos
         <span className="bg-gradient-to-r from-blue-400 to-purple-500 bg-clip-text text-transparent">

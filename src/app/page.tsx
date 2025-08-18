@@ -21,7 +21,7 @@ export default function Home() {
     .slice(0, 10);
 
   return (
-    <div className="min-h-screen space-y-6">
+    <div className="min-h-screen space-y-6 md:py-6">
       <HeroSection />
       <ProductList products={mostSellingProducts} title="Mais vendidos" />
       <FeaturesSection />

@@ -11,7 +11,7 @@ interface ProductItemProps {
 const ProductItem = ({ product }: ProductItemProps) => {
   return (
     <Link
-      href={`/`}
+      href={`/produtos/${product.slug}`}
       className="bg-card flex w-full flex-col gap-2 rounded-b-xl md:mr-4 md:gap-4"
     >
       <Image
