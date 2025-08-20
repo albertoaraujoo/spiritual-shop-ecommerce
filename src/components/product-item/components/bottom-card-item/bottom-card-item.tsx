@@ -1,6 +1,6 @@
 "use client";
 import { ProductProps } from "@/app/page";
-import { Button } from "@/components/ui/button";
+
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -10,7 +10,8 @@ interface SeeMoreButtonProps {
 
 export function BottomCardItem({ product }: SeeMoreButtonProps) {
   const pathname = usePathname();
-  const isProductPage = pathname.includes("/produtos");
+  const isProductPage =
+    pathname.includes("/produtos") || pathname.includes("/categoria");
 
   return (
     <>
@@ -29,16 +30,16 @@ export function BottomCardItem({ product }: SeeMoreButtonProps) {
           {product.price}
         </p>
       </div>
-      <Button
-        asChild
+      <Link
+        href={`/produtos/${product.slug}`}
         className={
           isProductPage
-            ? "flex rounded-t-none rounded-b-xl bg-gradient-to-r from-blue-400 to-purple-500 px-1 hover:from-blue-500 hover:to-purple-600 hover:text-white md:px-4"
+            ? "flex justify-center rounded-t-none rounded-b-xl bg-gradient-to-r from-blue-400 to-purple-500 px-1 py-2 font-semibold hover:from-blue-500 hover:to-purple-600 hover:text-white md:px-4"
             : "hidden"
         }
       >
-        <Link href={`/produtos/${product.slug}`}>Ver mais</Link>
-      </Button>
+        Ver mais
+      </Link>
     </>
   );
 }
