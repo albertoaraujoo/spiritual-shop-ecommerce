@@ -47,7 +47,7 @@ export function ProductList({ title, products }: ProductListProps) {
         >
           <CarouselContent className="ml-1">
             {products.map((product) => (
-              <ProductItem key={product.id} product={product} />
+              <ProductItem product={product} key={product.id} />
             ))}
           </CarouselContent>
 

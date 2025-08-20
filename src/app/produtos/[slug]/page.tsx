@@ -21,7 +21,7 @@ export default async function ProductPage({ params }: ProductPageProps) {
   }
 
   return (
-    <div className="min-h-screen md:py-6">
+    <div className="min-h-screen pb-6 md:py-6">
       <div className="lg:container lg:mx-auto lg:px-4 lg:py-8">
         <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
           {/* Imagem do Produto */}

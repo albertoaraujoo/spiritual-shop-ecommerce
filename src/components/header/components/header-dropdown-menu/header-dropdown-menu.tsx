@@ -24,7 +24,7 @@ export function HeaderDropdownMenu() {
         <DropdownMenuTrigger>
           <AlignJustify />
         </DropdownMenuTrigger>
-        <DropdownMenuContent>
+        <DropdownMenuContent className="mr-4">
           <Link href="/">
             <DropdownMenuItem>
               <House color="#fff" size={14} /> Home
@@ -70,7 +70,7 @@ export function HeaderDropdownMenu() {
 
           {Array.from(categories).map((category) => (
             <Link
-              href={`/category/${formatCategory(category)}`}
+              href={`/categoria/${formatCategory(category)}`}
               key={category}
               className="md:hidden"
             >
